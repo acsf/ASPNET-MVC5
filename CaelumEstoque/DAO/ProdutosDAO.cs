@@ -6,6 +6,7 @@ using System.Web;
 
 namespace CaelumEstoque.DAO
 {
+    //Classe responsável por acesso ao banco de dados
     public class ProdutosDAO
     {
         public void Adiciona(Produto produto)
