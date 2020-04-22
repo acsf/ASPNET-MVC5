@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IList<CaelumEstoque.Models.Produto>
+@{
     Layout = null;
 }
 
@@ -10,23 +11,25 @@
     <title>Index</title>
 </head>
 <body>
-    <div> 
+    <div>
         <table>
             <thead>
                 <tr>
                     <th>Id</th>
                     <th>Nome</th>
-                    <th>Quantidade</th>                   
+                    <th>Quantidade</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var produto in ViewBag.Produtos)
+                @foreach (var produto in Model)
                 {
-                <tr>
-                    <td>@produto.Id</td>
-                    <td>@produto.Nome</td>
-                    <td>@produto.Quantidade</td>                   
-                </tr>
+                    <tr>
+                        <td>@produto.Id</td>                       
+                        <td>
+                            @Html.ActionLink(produto.Nome, "Detalhes", new { id = produto.Id })
+                        </td>
+                        <td>@produto.Quantidade</td>
+                    </tr>
 
                 }
             </tbody>
