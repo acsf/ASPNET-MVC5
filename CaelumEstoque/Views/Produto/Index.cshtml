@@ -25,8 +25,8 @@
                 {
                     <tr>
                         <td>@produto.Id</td>                       
-                        <td>
-                            @Html.ActionLink(produto.Nome, "Detalhes", new { id = produto.Id })
+                        <td>                        
+                          @Html.RouteLink(produto.Nome,"DetalhesProduto", new { id = produto.Id})
                         </td>
                         <td>@produto.Quantidade</td>
                     </tr>
