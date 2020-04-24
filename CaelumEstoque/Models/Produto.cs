@@ -10,7 +10,7 @@ namespace CaelumEstoque.Models
     {
         public int Id { get; set; }
 
-        [Required,StringLength(20)]
+        [Required,StringLength(50)]
         public String Nome { get; set; }
         
         [Required]
